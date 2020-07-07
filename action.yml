@@ -1,10 +1,9 @@
 name: 'MQTT Message Action'
-description: |
-  This action sends a MQTT message from GitHub Actions.
+description: 'This action sends a MQTT message from GitHub Actions.'
 author: 'Joachim Uhrlaß'
 inputs:
   protocol:
-    description: 'MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' | 'ssl' | 'wx' | 'wxs''
+    description: "MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' | 'ssl' | 'wx' | 'wxs'"
     default: 'mqtt'
     required: true
   host:
