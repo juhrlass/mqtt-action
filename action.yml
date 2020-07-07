@@ -1,0 +1,38 @@
+name: 'MQTT Message Action'
+description: |
+  This action prints messages to an IRC Channel. Optionally waits for responses.
+author: 'Joachim Uhrlaß'
+inputs:
+  protocol:
+    description: 'MQTT server protocol. One of: 'wss' | 'ws' | 'mqtt' | 'mqtts' | 'tcp' | 'ssl' | 'wx' | 'wxs''
+    default: 'mqtt'
+    required: true
+  host:
+    description: 'MQTT server host'
+    default: 'localhost'
+    required: true
+  port:
+    description: 'MQTT server port'
+    default: 1883
+    required: true
+  topic:
+    description: 'MQTT topic'
+    required: true
+  username:
+    description: 'MQTT username'
+    required: false
+  password:
+    description: 'MQTT password'
+    required: false
+  message:
+    description: 'Message to send'
+    required: true
+outputs:
+  response:
+    description: 'Response'
+runs:
+  using: 'node12'
+  main: 'app.js'
+branding:
+  icon: 'hash'
+  color: 'gray-dark'
