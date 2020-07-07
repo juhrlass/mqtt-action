@@ -7,6 +7,7 @@
   "license": "MIT",
   "author": "Joachim Uhrlaß",
   "scripts": {
+    "build": "ncc build index.js",
     "test": "standard"
   },
   "dependencies": {
@@ -15,6 +16,7 @@
     "mqtt": "^4.1.0"
   },
   "devDependencies": {
+    "@zeit/ncc": "^0.22.3",
     "standard": "^14.3.4"
   }
 }
