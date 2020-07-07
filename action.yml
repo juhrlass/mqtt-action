@@ -1,5 +1,5 @@
-name: 'MQTT Message Action'
-description: 'This action sends a MQTT message from GitHub Actions.'
+name: 'MQTT Publish Action'
+description: 'This action publishes a MQTT message from GitHub Actions.'
 author: 'Joachim Uhrlaß'
 inputs:
   protocol:
