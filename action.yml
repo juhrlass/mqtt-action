@@ -27,12 +27,9 @@ inputs:
   message:
     description: 'Message to send'
     required: true
-outputs:
-  response:
-    description: 'Response'
 runs:
   using: 'node12'
   main: 'app.js'
 branding:
-  icon: 'hash'
+  icon: 'cast'
   color: 'gray-dark'
