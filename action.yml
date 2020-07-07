@@ -1,6 +1,6 @@
 name: 'MQTT Message Action'
 description: |
-  This action prints messages to an IRC Channel. Optionally waits for responses.
+  This action sends a MQTT message from GitHub Actions.
 author: 'Joachim Uhrlaß'
 inputs:
   protocol:
