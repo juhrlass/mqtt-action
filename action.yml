@@ -28,7 +28,7 @@ inputs:
     required: true
 runs:
   using: 'node12'
-  main: 'app.js'
+  main: 'dist/index.js'
 branding:
   icon: 'cast'
   color: 'gray-dark'

@@ -7,7 +7,7 @@
   "license": "MIT",
   "author": "Joachim Uhrlaß",
   "scripts": {
-    "build": "ncc build index.js",
+    "build": "ncc build app.js",
     "test": "standard"
   },
   "dependencies": {
