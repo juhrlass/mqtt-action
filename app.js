@@ -1,6 +1,9 @@
 const mqtt = require('mqtt')
 const core = require('@actions/core')
 
+const maxReconnects = core.getInput('maxReconnects') !== '' ? core.getInput('maxReconnects') : 10
+let reconnectCounter = 0
+
 const options = {
   protocol: core.getInput('protocol'),
   host: core.getInput('host'),
@@ -12,7 +15,7 @@ const options = {
 const topic = core.getInput('topic')
 const message = core.getInput('message')
 
-console.log('Try connecting to mqtt broker')
+console.log('Try connecting to mqtt broker with ' + maxReconnects + ' maximum reconnects')
 
 const client = mqtt.connect(options)
 
@@ -26,4 +29,14 @@ client.on('connect', function () {
     }
   })
   client.end()
+})
+
+client.on('reconnect', function () {
+  if (reconnectCounter === maxReconnects) {
+    client.end()
+    process.exitCode = 1
+  } else {
+    reconnectCounter++
+    console.log('Reconnect [' + reconnectCounter + '/' + maxReconnects + ']')
+  }
 })
