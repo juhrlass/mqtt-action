@@ -105,6 +105,3 @@ typings/
 
 # Jetbrains tools
 .idea
-
-# dist
-dist
