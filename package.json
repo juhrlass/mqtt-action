@@ -11,12 +11,12 @@
     "test": "standard"
   },
   "dependencies": {
-    "@actions/core": "^1.2.4",
-    "@actions/github": "^4.0.0",
-    "mqtt": "^4.1.0"
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1",
+    "mqtt": "^4.3.7"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.22.3",
+    "@vercel/ncc": "^0.34.0",
     "standard": "^14.3.4"
   }
 }
